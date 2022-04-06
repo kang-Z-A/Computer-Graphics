@@ -5,12 +5,12 @@ void display() {
 	glClearColor(1, 1, 1, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	//¾ØÕóµ÷ÓÃ£¬Í¨¹ıpush()ºÍpop()½øĞĞË¢ĞÂ¾ØÕó
+	//çŸ©é˜µè°ƒç”¨ï¼Œé€šè¿‡push()å’Œpop()è¿›è¡Œåˆ·æ–°çŸ©é˜µ
 	glLoadIdentity();
 	glPushMatrix();
 
-	//µÚÒ»¸ö²èºø
-	//Ïò×óÒÆ¶¯0.5¸öµ¥Î»£¬²¢ÑØyÖáĞı×ª180¶È
+	//ç¬¬ä¸€ä¸ªèŒ¶å£¶
+	//å‘å·¦ç§»åŠ¨0.5ä¸ªå•ä½ï¼Œå¹¶æ²¿yè½´æ—‹è½¬180åº¦
 	glTranslatef(-0.5, 0, 0);
 	glRotatef(180, 0, 1, 0);
 	glColor3f(0, 1, 0);
@@ -19,38 +19,39 @@ void display() {
 	glPopMatrix();
 	glPushMatrix();
 
-	//µÚ¶ş¸ö²èºø
-	//ÏòÉÏÒÆ¶¯0.5¸öµ¥Î»
+	//ç¬¬äºŒä¸ªèŒ¶å£¶
+	//å‘ä¸Šç§»åŠ¨0.5ä¸ªå•ä½
 	glTranslatef(0, 0.5, 0);
-	//ËõĞ¡ÎªÔ­À´µÄÒ»°ë
+	//ç¼©å°ä¸ºåŸæ¥çš„ä¸€åŠ
 	glScalef(0.5, 0.5, 0.5);
 	glColor3f(0, 0, 1);
 	glutSolidTeapot(0.3);
 
 	glPopMatrix();
 
-	//µÚÈı¸ö²èºø
-	//ÏòÓÒÒÆ¶¯0.5¸öµ¥Î»
+	//ç¬¬ä¸‰ä¸ªèŒ¶å£¶
+	//å‘å³ç§»åŠ¨0.5ä¸ªå•ä½
 	glTranslatef(0.5, 0, 0);
 	glColor3f(1, 0, 0);
 	glutWireTeapot(0.3);
-
 	glutSwapBuffers();
 }
 
 void main(int argc, char* argv[]) {
-	//³õÊ¼»¯glut
+	//åˆå§‹åŒ–glut
 	glutInit(&argc, argv);
-	//´´½¨´°¿Ú£¬ÑÕÉ«Ñ¡¶¨RGBÄ£Ê½£¬Ë«»º³åÇø
+	//åˆ›å»ºçª—å£ï¼Œé¢œè‰²é€‰å®šRGBæ¨¡å¼ï¼ŒåŒç¼“å†²åŒº
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
-	//Ñ¡Ôñ´°¿ÚÔÚÆÁÄ»ÖĞµÄÎ»ÖÃ
+	//é€‰æ‹©çª—å£åœ¨å±å¹•ä¸­çš„ä½ç½®
 	glutInitWindowPosition(100, 150);
-	//ÉèÖÃ´°¿Ú´óĞ¡
+	//è®¾ç½®çª—å£å¤§å°
 	glutInitWindowSize(640, 480);
-	//´´½¨´°¿Ú
+	//åˆ›å»ºçª—å£
 	glutCreateWindow("Teapots");
-	//ÊµÏÖÆÁÄ»Í¼ÏñäÖÈ¾º¯ÊırenderScene
+	//å®ç°å±å¹•å›¾åƒæ¸²æŸ“å‡½æ•°renderScene
 	glutDisplayFunc(display);
 
 	glutMainLoop();
 }
+
+//first git edit 
